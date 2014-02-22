@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home_screen" />
-	<Button
+	<ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_listen"
-        android:onClick="listen" />
+        android:src="@drawable/microphone_icon"
+        android:onClick="listen"
+        android:contentDescription="@string/button_listen" />
 </LinearLayout>
