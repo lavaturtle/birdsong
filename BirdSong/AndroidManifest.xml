@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sound.birdsong"
     android:versionCode="1"
-    android:versionName="1.2" >
+    android:versionName="1.3" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -29,6 +29,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sound.birdsong.MainActivity" />
+        </activity>
+        <activity
+            android:name="sound.birdsong.AnalysisActivity"
+            android:label="@string/title_activity_analysis"
+            android:parentActivityName="sound.birdsong.ListenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sound.birdsong.ListenActivity" />
         </activity>
     </application>
 
