@@ -8,13 +8,11 @@
     <string name="button_listen">Listen</string>
     <string name="button_stop_listening">Done listening</string>
     
-    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_listen">Listen</string>
-    <string name="title_activity_display_message">My Message</string>
     
-    <string name="home_screen">Home Screen</string>
+    <string name="home_screen">Bird Song Indentifier</string>
     
-    <string name="listening">Listening...</string>
+    <string name="listening">Listening…</string>
     
 
 </resources>

@@ -25,7 +25,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080001;
-        public static final int edit_message=0x7f080000;
+        public static final int textView1=0x7f080000;
     }
     public static final class layout {
         public static final int activity_listen=0x7f030000;
@@ -41,11 +41,9 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int button_listen=0x7f050002;
         public static final int button_stop_listening=0x7f050003;
-        public static final int home_screen=0x7f050007;
-        public static final int listening=0x7f050008;
-        public static final int title_activity_display_message=0x7f050006;
-        public static final int title_activity_listen=0x7f050005;
-        public static final int title_activity_main=0x7f050004;
+        public static final int home_screen=0x7f050005;
+        public static final int listening=0x7f050006;
+        public static final int title_activity_listen=0x7f050004;
     }
     public static final class style {
         /** 

@@ -23,14 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="sound.birdsong.DisplayMessageActivity"
-            android:label="@string/title_activity_display_message"
-            android:parentActivityName="sound.birdsong.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="sound.birdsong.MainActivity" />
-        </activity>
-        <activity
             android:name="sound.birdsong.ListenActivity"
             android:label="@string/title_activity_listen"
             android:parentActivityName="sound.birdsong.MainActivity" >
