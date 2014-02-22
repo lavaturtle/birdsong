@@ -1,4 +1,4 @@
-package com.example.birdsong;
+package sound.birdsong;
 
 import android.os.Bundle;
 import android.app.Activity;

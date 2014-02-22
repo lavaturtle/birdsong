@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.birdsong"
+    package="sound.birdsong"
     android:versionCode="1"
     android:versionName="1.2" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.birdsong.MainActivity"
+            android:name="sound.birdsong.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.birdsong.DisplayMessageActivity"
+            android:name="sound.birdsong.DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName="com.example.birdsong.MainActivity" >
+            android:parentActivityName="sound.birdsong.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.birdsong.MainActivity" />
+                android:value="sound.birdsong.MainActivity" />
         </activity>
     </application>
 
