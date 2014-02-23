@@ -16,8 +16,10 @@ public class AnalysisActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_analysis);
 
+		// TODO: get the filepath we were sent and read the audio data from it
+		// TODO: analyze that audio data and come up with a ranked list of possibilities
 		TextView topAnswerTxt = (TextView) findViewById(sound.birdsong.R.id.most_likely_bird);
-		topAnswerTxt.setText("bluejay");
+		topAnswerTxt.setText("bluejay");  // TODO: placeholder
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
