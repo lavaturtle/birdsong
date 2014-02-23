@@ -1,11 +1,14 @@
 package sound.birdsong;
 
+import android.media.AudioFormat;
 import android.media.AudioRecord;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -14,6 +17,9 @@ import android.os.Build;
 public class ListenActivity extends Activity
 {
 	private AudioRecord _recorder;
+	private static final int _sampleRateHz = 44100;
+	private static final int _channelConfig = AudioFormat.CHANNEL_IN_MONO;
+	private static final int _audioFormat = AudioFormat.ENCODING_PCM_16BIT;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -21,8 +27,20 @@ public class ListenActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_listen);
 		
-		_recorder = new AudioRecord();
-		_recorder.startRecording();
+		// Start recording audio
+		int bufferSize = AudioRecord.getMinBufferSize(_sampleRateHz, _channelConfig, _audioFormat);
+		try
+		{
+			_recorder = new AudioRecord(MediaRecorder.AudioSource.DEFAULT, _sampleRateHz, _channelConfig, _audioFormat, bufferSize);
+			_recorder.startRecording();
+		}
+		catch (RuntimeException ex)
+		{
+			TextView topAnswerTxt = (TextView) findViewById(sound.birdsong.R.id.listeningTitle);
+			topAnswerTxt.setText("Could not configure audio");
+			// TODO: replace analyze button with back to home button
+		}
+		// TODO: Start a thread to poll _recorder and append the data to a file 
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
@@ -43,9 +61,8 @@ public class ListenActivity extends Activity
 	public void endListen(View view)
 	{
 		_recorder.stop();
-		// TODO: pull the sound data out of the recorder
 		Intent intent = new Intent(this, AnalysisActivity.class);
-		// TODO: send the sound
+		// TODO: send the filepath we wrote data to
 		startActivity(intent);
 	}
 

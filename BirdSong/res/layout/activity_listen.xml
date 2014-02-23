@@ -10,7 +10,7 @@
     tools:context=".ListenActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/listeningTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/listening" />
@@ -18,8 +18,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/listeningTitle"
+        android:layout_below="@+id/listeningTitle"
         android:minHeight="0dp"
         android:onClick="endListen"
         android:text="@string/button_stop_listening" />
